@@ -1,0 +1,1 @@
+A seed for awesome projects koa, react, sass, webpack
