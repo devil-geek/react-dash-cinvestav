@@ -1,0 +1,25 @@
+{
+  "name": "devil-seed",
+  "version": "0.0.1",
+  "description": "A seed for awesome projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/devil-geek/devil-seed.git"
+  },
+  "keywords": [
+    "koa",
+    "react",
+    "sass",
+    "webpack"
+  ],
+  "author": "CarOJ (devil-geek)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/devil-geek/devil-seed/issues"
+  },
+  "homepage": "https://gitlab.com/devil-geek/devil-seed#README"
+}
