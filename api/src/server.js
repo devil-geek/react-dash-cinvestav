@@ -27,7 +27,7 @@ app.use(async (ctx, next) => {
 // response
 
 app.use(async ctx => {
-  ctx.body = { foo: 'bar' }
+  ctx.body = { foo: 'CAR' }
 })
 
 app.listen(3000)
