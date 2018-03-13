@@ -1,13 +1,12 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const port = 8080;
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const NpmInstallPlugin = require('npm-install-webpack-plugin')
+
 module.exports = {
-  devtool: 'inline-source-map',  
+  devtool: 'inline-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:' + port,
-    'webpack/hot/only-dev-server',
     path.join(__dirname, 'app', 'src', 'components', 'App.js')
   ],
   output: {
@@ -18,19 +17,21 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'app', 'public', 'index.html')
     }),
-    new webpack.NamedModulesPlugin(),    
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new NpmInstallPlugin(),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        /* We'll leave npm packages as is and not 
-           parse them with Babel since most of them 
+        /* We'll leave npm packages as is and not
+           parse them with Babel since most of them
            are already pre-transpiled anyway. */
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['babel-loader']
       },
       {
         test: /\.scss$/,
@@ -52,14 +53,26 @@ module.exports = {
           }
         }]
       },
-      { 
+      {
         test: /\.(eot|svg|ttf|woff2?|otf)$/,
         use: 'file-loader'
       }
     ]
   },
   devServer: {
+    host: '0.0.0.0',
+    compress: true,
+    clientLogLevel: 'info',
     hot: true,
-    contentBase: './public'
+    contentBase: './public',
+    watchContentBase: true,
+    open: true,
+    overlay: true,
+    port: 1990,
+    proxy: {
+      '/api': 'http://localhost:3000'
+    },
+    useLocalIp: true,
+    stats: 'minimal'
   }
 }
