@@ -11,6 +11,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'build'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: [
@@ -58,6 +59,9 @@ module.exports = {
         use: 'file-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     host: '0.0.0.0',
