@@ -5,11 +5,17 @@ import axios from 'axios'
 class Dummy extends Component {
   async getData () {
     try {
-      const res = await axios('http://localhost:3000/api/')
-      const data = res.data
-      console.log(
-        data
-      )
+      let res = await axios('http://localhost:3000/api/')
+      let data = res.data
+      console.log(data)
+
+      res = await axios('http://localhost:3000/admin/my')
+      data = res.data
+      console.log(data)
+
+      res = await axios('http://localhost:3000/admin/')
+      data = res.data
+      console.log(data)
       // do something with response
     } catch (error) {
       console.log(error)

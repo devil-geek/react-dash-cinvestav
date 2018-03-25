@@ -11,7 +11,7 @@ module.exports = {
     'index': [
       'eventsource-polyfill',
       'webpack/hot/dev-server',
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=5000',
       path.join(__dirname, 'app', 'src', 'Index.js')
     ]
   },

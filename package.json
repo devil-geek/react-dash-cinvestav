@@ -88,6 +88,8 @@
     ]
   },
   "nodemonConfig": {
-    "ignore": ["app/*"]
+    "ignore": [
+      "app/*"
+    ]
   }
 }
