@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import {BrowserRouter} from 'react-router-dom'
 import styles from './App.scss'
 import Dummy from './Dummy'
 
@@ -15,9 +13,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-)
+export default App

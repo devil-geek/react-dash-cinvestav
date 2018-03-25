@@ -3,14 +3,20 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const NpmInstallPlugin = require('npm-install-webpack-plugin')
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
-  devtool: 'inline-source-map',
-  entry: [
-    path.join(__dirname, 'app', 'src', 'components', 'App.js')
-  ],
+  devtool: isDev ? 'inline-source-map' : 'none',
+  entry: {
+    'index': [
+      'eventsource-polyfill',
+      'webpack/hot/dev-server',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+      path.join(__dirname, 'app', 'src', 'Index.js')
+    ]
+  },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, '/build'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -22,17 +28,17 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin('[name].css'),
     new NpmInstallPlugin(),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        /* We'll leave npm packages as is and not
-           parse them with Babel since most of them
-           are already pre-transpiled anyway. */
-        exclude: /node_modules/,
-        use: ['babel-loader']
+        exclude: path.join(__dirname, 'node_modules/'),
+        use: ['babel-loader'],
+        include: path.join(__dirname, 'app', 'src')
       },
       {
         test: /\.scss$/,
@@ -68,10 +74,13 @@ module.exports = {
     compress: true,
     clientLogLevel: 'info',
     hot: true,
-    contentBase: './public',
+    contentBase: path.join(__dirname, '/public'),
     watchContentBase: true,
-    open: true,
-    overlay: true,
+    open: false,
+    overlay: {
+      warnings: true,
+      errors: true
+    },
     port: 1990,
     proxy: {
       '/api': 'http://localhost:3000'

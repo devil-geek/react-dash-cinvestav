@@ -5,7 +5,7 @@ import axios from 'axios'
 class Dummy extends Component {
   async getData () {
     try {
-      const res = await axios('http://localhost:3000')
+      const res = await axios('http://localhost:3000/api/')
       const data = res.data
       console.log(
         data
@@ -21,7 +21,7 @@ class Dummy extends Component {
   render () {
     return (
       <div>
-        <h1 className={styles.miclase}>Hello  Dummy</h1>
+        <h1 className={styles.miclase}>Hello Dummy</h1>
       </div>
     )
   }

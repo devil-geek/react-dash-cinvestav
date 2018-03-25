@@ -1,33 +1,35 @@
 const Koa = require('koa')
-const cors = require('koa-cors')
+const router = require('koa-router')()
+const cors = require('@koa/cors')
 const json = require('koa-json')
-
 const app = new Koa()
+const webpack = require('webpack')
+const config = require('../../webpack.config.js')
+
+const compiler = webpack(config)
+
+const devMiddleware = require('koa-webpack-dev-middleware')(
+  compiler,
+  config.devServer
+)
+const hotMiddleware = require('koa-webpack-hot-middleware')(
+  compiler
+)
+
+app.use(devMiddleware)
+app.use(hotMiddleware)
 
 app.use(cors())
 app.use(json())
-// x-response-time
 
-app.use(async (ctx, next) => {
-  const start = Date.now()
-  await next()
-  const ms = Date.now() - start
-  ctx.set('X-Response-Time', `${ms}ms`)
+router.get('/api/', (ctx) => {
+  ctx.body = 'HI UK WTF CAR'
 })
 
-// logger
+app.use(router.routes())
 
-app.use(async (ctx, next) => {
-  const start = Date.now()
-  await next()
-  const ms = Date.now() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}`)
-})
-
-// response
-
-app.use(async ctx => {
-  ctx.body = { foo: 'CAR' }
-})
+/* app.use(async ctx => {
+  ctx.body = { foo: 'CARL' }
+}) */
 
 app.listen(3000)
