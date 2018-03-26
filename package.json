@@ -4,10 +4,11 @@
   "description": "A seed for awesome projects",
   "main": "index.js",
   "scripts": {
-    "start": "npm run webserver",
+    "start": "npm run build && NODE_ENV=production npm run webserver",
+    "start-dev": "NODE_ENV=dev npm run webserver",
     "dev": "webpack-dev-server",
     "webserver": "nodemon api/src/server.js",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,10 +30,12 @@
   "dependencies": {
     "@koa/cors": "^2.2.1",
     "axios": "^0.18.0",
+    "babel-runtime": "^6.26.0",
     "components": "^0.1.0",
     "koa": "^2.5.0",
     "koa-json": "^2.0.2",
     "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
@@ -44,6 +47,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "eventsource-polyfill": "^0.9.6",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -60,10 +64,12 @@
     "sass-loader": "^6.0.7",
     "standard": "^11.0.0",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.8.1",
     "webpack-dev-middleware": "^3.0.0",
     "webpack-dev-server": "^2.9.5",
-    "webpack-hot-client": "^2.0.0"
+    "webpack-hot-client": "^2.0.0",
+    "webpack-merge": "^4.1.2"
   },
   "babel": {
     "presets": [
@@ -71,7 +77,7 @@
       "react"
     ],
     "env": {
-      "development": {
+      "dev": {
         "presets": [
           "react-hmre"
         ]
