@@ -32,11 +32,41 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        include: path.join(__dirname, 'app', 'src', 'components'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
-            'sass-loader'
+            {
+              loader: 'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]'
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [
+                  path.resolve(__dirname, 'node_modules/')
+                ]
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, 'app', 'src', 'styles'),
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [
+                  path.resolve(__dirname, 'node_modules/')
+                ]
+              }
+            }
           ]
         })
       },

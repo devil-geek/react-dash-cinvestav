@@ -4,7 +4,6 @@ const Koa = require('koa')
 const cors = require('@koa/cors')
 const json = require('koa-json')
 const app = new Koa()
-const settings = require('../../config.json')
 const serve = require('koa-static')
 const port = process.env.PORT || 3000
 

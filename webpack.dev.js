@@ -21,7 +21,11 @@ module.exports = merge(common, {
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('dev'),
+      'process.env.BABEL_ENV': JSON.stringify('dev')
+    })
   ],
   devServer: {
     host: '0.0.0.0',
