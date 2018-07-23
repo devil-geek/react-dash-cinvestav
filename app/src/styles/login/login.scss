@@ -1,0 +1,112 @@
+#login{
+    min-height: 800px;
+    max-height: 1500px;
+    height: auto;
+    background: #009393;
+    .loginContainer{
+        width: 40%;
+        margin: 0 auto;
+        padding-top: 10%;
+        .leftContainer{
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            background: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            .content{    
+                padding-top: 20%;
+                padding-bottom: 20%;
+                height: 80%;        
+                .importantTitle{
+                    font-size: 20px;
+                    text-align: left;
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 5px;
+                }
+                .littleTitle{
+                    font-size: 16px;
+                    text-align: left;
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+                span{
+                    display: block;
+                }
+                .inputContainer{
+                    input{
+                        display: block;
+                        height: 30px;
+                        border-radius: 5px;
+                        padding: 5px;
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-bottom: 10px;
+                    }
+                }
+                .button{
+                    width: 30%;
+                    color: white;
+                    background: #009393;
+                    height: 30px;
+                    border-radius: 4px;
+                    text-align: center;
+                    line-height: 30px;
+                    box-shadow: 2px 2px 2px black;
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    &:hover{
+                        background: #156565;
+                    }
+                }
+                .forgotLabel{
+                    text-align: right;
+                    color: #009393;
+                    font-size: 12px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    margin-bottom: 10px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #156565;
+                    }
+                }
+            }
+        }
+        .rightContainer{
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            background: #d6d6d6;
+            color: #009393;
+            text-align: center;
+            padding: 18px;
+            padding-top: 10%;
+            height: 90%;
+            padding-bottom: 10%;
+            .content{
+                span{
+                    display: block;
+                }
+                .lblCinves{
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+                .lblName{
+                    font-size: 18px;
+                }
+                .ico{
+                    display: block;
+                    color: white;
+                    font-size: 180px;
+                }
+            }
+        }
+    }
+}

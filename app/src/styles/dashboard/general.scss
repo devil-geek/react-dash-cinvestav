@@ -1,0 +1,21 @@
+.subheader{
+    width: 100%;
+    color: #6e7d7b;
+    box-shadow: inset 0px 8px 17px -5px #214f5d;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    .line{
+        border: 1px solid black;
+        width: 30%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .titleDiv{
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+    }
+
+}

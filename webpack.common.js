@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   entry: {
     app: [
-      path.join(__dirname, 'app', 'src', 'Index.js')
+      path.join(__dirname, 'app', 'src', 'index.js')
     ]
   },
   output: {
@@ -30,8 +30,8 @@ module.exports = {
         use: ['babel-loader'],
         include: path.join(__dirname, 'app', 'src')
       },
-      {
-        test: /\.scss$/,
+      /* {
+        test: /\.s?css$/,
         include: path.join(__dirname, 'app', 'src', 'components'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -49,10 +49,10 @@ module.exports = {
             }
           ]
         })
-      },
+      }, */
       {
-        test: /\.scss$/,
-        include: path.join(__dirname, 'app', 'src', 'styles'),
+        test: /\.s?css$/,
+        // include: path.join(__dirname, 'app', 'src', 'styles'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [

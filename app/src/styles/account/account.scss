@@ -1,0 +1,50 @@
+.account{
+    .contentButtons{
+        text-align: right;
+        margin-right: 50px;
+        .buttonSalir{
+            text-align: center;
+            width: 120px;
+            background: #e61610;
+            color: #fafbfb;
+            height: 50px;
+            border-radius: 10px;
+            line-height: 50px;
+            font-size: 25px;
+            margin-right: 20px;
+            display: inline-block;
+            cursor: pointer;
+            &:hover{
+                background: #A7A7A7;
+            }
+            .ico{
+                color: #fafbfb;
+                height: 30px;
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+        .buttonAdd{
+            text-align: center;
+            margin: 0 auto;
+            width: 250px;
+            background: #ffa834;
+            color: #fafbfb;
+            height: 50px;
+            border-radius: 10px;
+            line-height: 50px;
+            font-size: 25px;
+            display: inline-block;
+            cursor: pointer;
+            &:hover{
+                background: #A7A7A7;
+            }
+            .ico{
+                color: #fafbfb;
+                height: 30px;
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+    }
+}

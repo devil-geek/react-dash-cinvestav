@@ -1,0 +1,138 @@
+.notifications{
+    .contentTable{
+        padding-top: 30px;
+        #titlePrincipal{
+            background: #e0e6e7;
+            border-color: #becbce;
+            color: #214f5d;
+            width: 90%;
+            margin: 0 auto;
+            padding: 5px; 
+            font-size: 14px;
+        }
+        table{
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
+            border-collapse: collapse;
+            background: #f3f3f3;
+            height: 50px;
+            th{
+                background: #fafbfb;
+                color: #214f5d;
+                padding: 5px;
+            }
+
+            tbody{
+                tr{
+                    height: 40px;
+                    .checkbox{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 50%;
+                        color: #212121;
+                        .ico{
+                            color: #2196f3;
+                            font-size: 20px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                        .text{
+                            margin-right: 10px;
+                        }
+                    }
+                    &:nth-child(even) {
+                        background: #e8eaf6;
+                    }
+                }
+                .nombreWrap{
+                    .iconContact{
+                        width: 25%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 24px;
+                        text-align: center;
+                        .ico{
+                            color: #616161;
+                        }
+                    }
+                    .nameWrap{
+                        width: 75%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    width: 30%;
+                }
+                .emailWrap{
+                    width: 25%
+                }
+                .notificationWrap{
+                    text-align: center;
+                    width: 30%;
+                }
+                .iconWrap{
+                    width: 5%;
+                    .icoEdit{
+                        color: #279e8c;
+                        font-size: 27px;
+                        width: 50%;
+                        padding: 2px;
+                        cursor: pointer;
+                        &:hover{
+                            color: rgba(0, 0, 0, .8);
+                        }
+                    }
+                    .icoDelete{
+                        color: #e61610;
+                        font-size: 20px;
+                        padding: 2px;
+                        cursor: pointer;
+                        &:hover{
+                            color: rgba(0, 0, 0, .8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .buttonCont{
+        border: #A7A7A7;
+        width: 20%;
+        float: right;
+        margin-right: 5%;
+        margin-top: 5%;
+        .button1{
+            text-align: center;
+            background: #ffa834;
+            color: #fafbfb;
+            height: 50px;
+            border-radius: 10px;
+            line-height: 50px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            box-shadow: 3px 5px 15px -2px black;
+            &:hover{
+                background: #A7A7A7;
+            }
+            .ico{
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+        .button2{
+            text-align: center;
+            background: #214f5d;
+            color: #fafbfb;
+            height: 50px;
+            border-radius: 10px;
+            line-height: 50px;
+            box-shadow: 3px 5px 15px -2px black;
+            font-size: 20px;
+            cursor: pointer;
+            &:hover{
+                background: #A7A7A7;
+            }
+        }
+    }
+}

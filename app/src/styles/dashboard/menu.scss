@@ -1,0 +1,68 @@
+    .barMenu{
+        background: #012530;
+        min-height: calc(100vh - 60px);
+        display: inline-block;
+        vertical-align: top;
+        width: 5%;
+        &.active{
+            width: 20%;
+        }
+        .ico{
+            font-size: 25px;
+            color: #79949c;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20%;
+            cursor: pointer;
+        }
+        .menuIcon{
+            font-size: 25px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #79949c;
+            cursor: pointer;
+            &:hover{
+                background: rgba(3, 80, 104, 0.973);
+                box-shadow: 0px 10px 18px #000000;
+                &.ico{
+                color: #279e8c;
+                }
+            }
+        }
+        .linkStyle{
+            text-decoration: none;
+            .menuOption{
+                color: #edf2f1;
+                text-decoration: none;
+                height: 50px;
+                font-size: 14px;
+                line-height: 50px;
+                cursor: pointer;
+                text-align: center;
+                &.active{
+                    text-align: left;
+                }
+                &:hover{
+                    background: rgba(3, 80, 104, 0.973);
+                    box-shadow: 0px 10px 18px #000000;
+                    &.ico{
+                    color: #279e8c;
+                    }
+                } 
+                .txtMenu{
+                    color: #edf2f1;
+                    margin-left: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .ico{
+                    color: #79949c;
+                    font-size: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+            }
+        }
+    }

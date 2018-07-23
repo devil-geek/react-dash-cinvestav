@@ -1,0 +1,31 @@
+{
+    "medidores": [
+        {
+            "labl": "Medidor 1",
+            "ubicacion": "Central",
+            "name": "Medidor 1"
+        },{
+            "labl": "Medidor 2",
+            "ubicacion": "Edifico A",
+            "name": "Medidor 2"
+        },{
+            "labl": "Medidor 3",
+            "ubicacion": "Edifico B",
+            "name": "Medidor 3"
+        },{
+            "labl": "Medidor 4",
+            "ubicacion": "Edifico C",
+            "name": "Medidor 4"
+        }, 
+        {
+            "labl": "Medidor 5",
+            "ubicacion": "Edifico D",
+            "name": "Medidor 5"
+        }, 
+        {
+            "labl": "Medidor 6",
+            "ubicacion": "Edifico E",
+            "name": "Medidor 6"
+        }
+    ]
+}

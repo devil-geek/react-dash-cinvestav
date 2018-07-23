@@ -1,0 +1,31 @@
+.header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    box-shadow: 6px 3px 16px 0px #214f5d;
+    .cinves{ 
+        color: white;
+        background: #009683;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 95%;
+        .spanCinves{
+            padding-left: 10px;
+        }
+    }
+    .back-ico{
+        color: white;
+        font-size: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 5%;
+        text-align: center;
+
+        .ico{
+            font-size: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
