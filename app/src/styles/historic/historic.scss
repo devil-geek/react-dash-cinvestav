@@ -1,0 +1,221 @@
+#historic{
+    .optionsDiv{
+        width: 70%;
+        background: white;
+        margin: 0 auto;
+        .title{
+            display: block;
+            width: 100%;
+            background: #e0e6e7;
+            color: #214f5d;
+            padding: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+        .medidorSelection{
+            width: 100%;
+            padding: 15px;
+            box-shadow: 0px 1px 2px #e0e6e7;
+            .instruction{
+                display: inline-block;
+                vertical-align: middle;
+                width: 20%;
+                color: #214f5d;
+                font-size: 14px;
+            }
+            .selectionMedidores{
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                width: 30%;
+                .selectedMedidor{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 80%;
+                    text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    border: 1px solid #279e8c;
+                    border-radius: 5px 0px 0px 5px;
+                }
+                .listMeasurer{
+                    width: 80%;
+                    position: absolute;
+                    background: white;
+                    box-shadow: 2px 2px 2px #A7a7a7;
+                    .optionMedidor{
+                        height: 30px;
+                        line-height: 30px;
+                        color: #214f5d;
+                        font-size: 14px;
+                        text-align: center;
+                        &:hover{
+                            background: #279e8c;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .iconContainer{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20%;
+                    cursor: pointer;
+                    background: #279e8c;
+                    color: white;
+                    text-align: center;
+                    font-size: 22px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 0px 5px 5px 0px;
+                }
+            }
+        }
+        .selectionOptions{
+            padding: 15px;
+            font-size: 14px;
+            box-shadow: 1px 0px 10px #e0e6e7;
+            .periodSelection{
+                width: 70%;
+                display: inline-block;
+                vertical-align: middle;
+                .instruction{
+                    color: #214f5d;
+                    width: 22%;
+                    margin-right: 3%;
+                }
+                input{
+                    width: 25%;
+                    margin-right: 3%;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    text-align: center;
+                    color: #279e8c;
+                }
+            }
+            .radioButtons{
+                width: 30%;
+                display: inline-block;
+                vertical-align: middle;
+                .buttonRadio{
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    .circleContainer{
+                        width: 40%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        .outsideCircle{
+                            display: inline-block;
+                            vertical-align: middle;
+                            border: 1px solid #279e8c;
+                            border-radius: 50%;
+                            height: 30px;
+                            width: 30px;
+                            .circle{
+                                border-radius: 50%;
+                                height: 20px;
+                                width: 20px;
+                                margin: 0 auto;
+                                &.active{
+                                    background: #279e8c;
+                                    margin-top: 10%;
+                                    margin-bottom: 10%;
+                                }
+                            }
+                        }
+                    }
+                    .name{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        .sensorsSelection{
+            padding: 15px;
+            .sensorDiv{
+                display: inline-block;
+                vertical-align: middle;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                .instruction{
+                    color: #214f5d;
+                    font-size: 14px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    display: block;
+                }
+                .sensorButton{
+                    .selectionSensor{
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: 14px;
+                        margin-right: 10px;
+                        .divCircle{
+                            width: 50px;
+                            height: 20px;
+                            border-radius: 20px;
+                            margin: 0 auto;
+                            cursor: pointer;
+                            border: 1px solid #e0e0e0;
+                            background: #e0e0e0;
+                            &.active{
+                                border: 1px solid #90caf9;
+                                background: #90caf9;
+                            }
+                            .circle{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;   
+                                border: 1px solid #ffffff;
+                                background: #ffffff;
+                                float: right;                                 
+                                &.active{
+                                    border: 1px solid #2196f3;
+                                    background: #2196f3;
+                                    float: left;                                
+                                }
+                            }
+                        }
+                    }
+                    .name{
+                        color:#279e8c;
+                        margin-top: 5px;
+                        display: block;
+                    }
+                }
+            }
+            .buttonsContainer{
+                display: inline-block;
+                vertical-align: middle;
+                width: 20%;
+                color: white;
+                .button{
+                    display: block;
+                    margin-bottom: 15px;
+                    border-radius: 10px;
+                    width: 70%;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    text-align: center;
+                    box-shadow: 1px 3px 2px black;
+                    &.pdf{
+                        background: red;
+                        cursor: pointer;
+                    }
+                    &.cons{
+                        background: #2196f3;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+    }
+}
