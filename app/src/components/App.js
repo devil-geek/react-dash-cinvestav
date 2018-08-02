@@ -90,7 +90,7 @@ class App extends React.Component {
                                 <Switch>
                                     <Route path='/login' render={(props) => <Login {...this.state} actions={actions}/>} />
                                     <Route path='/tablero' render={(props) => <Tablero {...this.state} actions={actions}/>} />
-                                    <Route path='/historial' component={Historic} />
+                                    <Route path='/historial' render={(props) => <Historic {...this.state} actions={actions}/>} />
                                     <Route path='/rango' render={(props) => <ParameterRange {...this.state} actions={actions}/>} />
                                     <Route path='/ajustes' component={Settings} />
                                     <Route path='/notificaciones' render={(props) => <Notifications {...this.state} actions={actions}/>} />
